@@ -465,8 +465,6 @@ module.exports = function(grunt) {
      * Grunt watch event
      */
     grunt.event.on('watch', function(action, filepath) {
-        grunt.log.error('Here we are', filepath, shopify.getAssetKey(filepath));
-
         var config = grunt.config('shopify');
         var themePath = fs.realpathSync(config.options.base);
         var assetPath  = fs.realpathSync(filepath);
@@ -475,7 +473,7 @@ module.exports = function(grunt) {
         try {
             if(fs.lstatSync(filepath).isDirectory()) {
                 upload = false;
-            } else if (assetPath.indexOf(themePath) != 0) {
+            } else if (assetPath.indexOf(themePath) !== 0) {
                 upload = false;
             }
         } catch (e) {
