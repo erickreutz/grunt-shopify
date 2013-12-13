@@ -31,7 +31,8 @@
     "growl": "~1.7"
   },
   "devDependancies": {
-    "grunt-contrib-jshint": "~0.1.1"
+    "grunt-contrib-jshint": "~0.1.1",
+    "growl": "latest"
   },
   "keywords": [
     "gruntplugin",
